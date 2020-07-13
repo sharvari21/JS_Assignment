@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Assingmenty No 1</title>
+    </head>
+    <body>
+        Today is:<span id="exp"></span><br>
+        Current Time is:<span id="time"></span>
+        <script>
+            var d = new Date();
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            document.getElementById("exp").innerHTML = days[d.getDay()];
+            document.getElementById("time").innerHTML = d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+        </script>
+    </body>
+</html>
