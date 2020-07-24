@@ -1,1 +1,158 @@
+Question 1 :
+Explore and explain the various methods in console function
+Explain them
+Ex. console.log()
+console.warn().
+Ans:
+1. console.log():
 
+The console.log() is a function in JavaScript which is used to print any kind of variables defined before in it or to just print any message that needs to be displayed to the user.
+
+Syntax:
+
+console.log(A);
+Parameters: It accepts a parameter which can be an array, an object or any message.
+Return value: It returns the value of the parameter given.
+JavaScript codes to show the working of this function:
+ Passing a number as an argument: If the number is passed to the function console.log() then the function will display it.
+Code:
+<script> 
+var a = 2; 
+console.log(a); 
+</script> 
+
+2. console.warn():
+
+The console.warn() function from console class of Node.js is used to display the warning messages on the console. It prints to stderr with newline.
+
+Note: This function is an alias of console.error() function.
+
+Syntax:
+
+console.warn( [data][, ...args] )
+Parameter: This function can contains multiple parameters. The first parameter is used for the primary message and other parameters are used for substitution values.
+
+Return Value: The function returns the warning message.
+Below programs demonstrate the working of the console.warn() function:
+
+Program 1:
+
+function displayWarning(x) { 
+    console.warn(`GeeksforGeeks is a ${x} portal`); 
+} 
+   
+const x = 'Computer Science'; 
+  
+displayWarning(x); 
+
+Question 2 :
+Write the difference between var, let and const with code examples.
+
+Ans:
+
+Var
+The JavaScript variables statement is used to declare a variable and, optionally, we can initialize the value of that variable.
+
+Example: var a =10;
+
+Variable declarations are processed before the execution of the code.
+The scope of a JavaScript variable declared with var is its current execution context.
+The scope of a JavaScript variable declared outside the function is global.
+ex:
+function nodeSimplified(){
+  var a =10;
+  console.log(a);  // output 10
+  if(true){
+   var a=20;
+   console.log(a); // output 20
+  }
+  console.log(a);  // output 20
+}
+
+let
+The let statement declares a local variable in a block scope. It is similar to var, in that we can optionally initialize the variable.
+
+Example: let a =10;
+
+The let statement allows you to create a variable with the scope limited to the block on which it is used.
+It is similar to the variable we declare in other languages like Java, .NET, etc.
+
+ex:
+function nodeSimplified(){
+  let a =10;
+  console.log(a);  // output 10
+  if(true){
+   let a=20;
+   console.log(a); // output 20
+  }
+  console.log(a);  // output 10
+}
+
+const
+const statement values can be assigned once and they cannot be reassigned. The scope of const statement works similar to let statements.
+Example: const a =10;
+
+function nodeSimplified(){
+  const MY_VARIABLE =10;
+  console.log(MY_VARIABLE);  //output 10 
+}
+
+Question 3 :
+Write a brief intro on available data types in Javascript.
+
+Ans:
+
+A value in JavaScript is always of a certain type. It can be a string or a number, etc.
+
+        There are 8 basic data types in javascript.
+        1]      Number:
+                    It represents both integer and floating point numbers.
+                    There are some special numeric values which are part of this data type and they are : Infinity and NaN.
+                    Infinity represents the mathematical infinity , which is a special value greater than any other value. 
+                    NaN represents a computational error. It is a result of an incorrect or an undefined mathematical operation.
+            
+        2]      BigInt:
+                    In JavaScript, the 'number' type cannot represent integer values larger than (2^53-1) (that’s 9007199254740991), or less than -(-2^53-1) for negatives. It’s a technical limitation caused by their internal representation.
+                    BigInt type was recently added to the language to represent integers of arbitrary length.
+                    A BigInt value is created by appending n to the end of an integer:
+                    ex: const bigInt = 900719925474099178383675n;
+
+        3]      String:
+                    A string in JavaScript must be surrounded by quotes.
+                    In javascript there are 3 types of quotes:
+                    i> Single Quotes: 'Hello'
+                    ii> Double Quotes: "Hello"
+                    iii> Backticks: `Hello`
+                    Double and single quotes are 'simple' quotes. There’s practically no difference between them in JavaScript.
+                    Backticks are 'extended functionality' quotes. They allow us to embed variables and expressions into a string by wrapping them in ${…}
+                    The expression inside ${…} is evaluated and the result becomes a part of the string. We can put anything in there: a variable like name or an arithmetical expression like 1 + 2 or something more complex.
+
+        4]      Boolean:
+                    The boolean type has only two values: true and false.
+                    This type is commonly used to store yes/no values: true means ''yes, correct', and false means 'no, incorrect'.
+                    Boolean values also come as a result of comparision.
+
+        5]      null:
+                    The special null value does not belong to any of the types described above.
+                    It forms a separate type of its own which contains only the null value.
+                    In JavaScript, null is not a 'reference to a non-existing object' or a 'null pointer' like in some other languages.
+                    It’s just a special value which represents 'nothing', 'empty' or 'value unknown'.
+
+        6]      undefined:
+                    The special value undefined also stands apart. It makes a type of its own, just like null.
+                    The meaning of undefined is 'value is not assigned'.
+                    If the variable is declared but not assigned then its values in undefined.
+
+        7]      Objects and symbols:
+                    The object type is special. 
+                    All other types are called 'primitive' because their values can contain only a single thing.
+                    In contrast, objects are used to store collections of data and more complex entities.
+                    The symbol type is used to create unique identifiers for objects.
+                
+        8]      Typeof Operator:
+                    The typeof operator returns the type of the argument. It’s useful when we want to process values of different types differently or just want to do a quick check.
+                    There are two formats for syntax:
+                    i> As an operator: typeof x;
+                    ii> As a function: typeof(x);
+
+                    In both these cases, the result is same. In short, it works with both parenthesis and without parenthesis.
